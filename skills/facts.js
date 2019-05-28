@@ -34,7 +34,6 @@ module.exports = function (controller) {
 
             // Confirmation thread
             convo.addMessage(
-                //action: 'default',
                 "You picked '{{responses.answer}}'",
                 "confirm_choice");
 
@@ -44,7 +43,7 @@ module.exports = function (controller) {
                     callback: function (response, convo) {
                         var pickedFlavor = convo.extractResponse('answer');
                         convo.setVar("flavor", pickedFlavor);
-                        convo.gotoThread("success");
+                        convo.gotoThread("productSearch");
                     },
                 },
                 {
@@ -54,6 +53,13 @@ module.exports = function (controller) {
                     }
                 }
             ], {}, "confirm_choice");
+
+
+            //Product Search Thread
+            convo.addMessage(
+                "I'm searching for Cheetos '{{vars.flavor}}'",
+                "productSearch");
+
 
             // Success thread
             convo.addMessage(
