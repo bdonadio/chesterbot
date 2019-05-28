@@ -9,7 +9,7 @@ module.exports = function (controller) {
 
         bot.startConversation(message, function (err, convo) {
 
-            convo.ask("Enter Cheetos product to lookup nutrition information", [
+            convo.ask("Enter Cheetos product name to lookup nutrition information", [
                 {
                 //    pattern: "^blue|green|pink|red|yellow$",
                     default: true,
@@ -57,7 +57,30 @@ module.exports = function (controller) {
 
             //Product Search Thread
             convo.addMessage(
-                "I'm searching for Cheetos '{{vars.flavor}}'",
+                "I'm searching for '{{vars.flavor}}'",
+
+
+                //Rest API Search Request to USDA Food Database
+                var request = require("request");
+
+                var options = { method: 'GET',
+                  url: 'https://api.nal.usda.gov/ndb/search/',
+                  qs:
+                   { format: 'json',
+                     q: 'pickedFlavor',
+                     sort: 'n',
+                     max: '25',
+                     offset: '0',
+                     api_key: 'wFqUmW1ckj0MTlwYUxmgx5XsOlboTvwJceKcCzIf' },
+                  headers:
+                   { 'Postman-Token': '106ade00-4e99-4323-9cee-af37535fb3bc',
+                     'cache-control': 'no-cache' } };
+
+                request(options, function (error, response, body) {
+                  if (error) throw new Error(error);
+
+                  console.log(body);
+                });
                 "productSearch");
 
 
@@ -68,34 +91,3 @@ module.exports = function (controller) {
         });
     });
 };
-
-
-
-
-
-
-
-
-//Rest API Search Request to USDA Food Database
-
-
-var request = require("request");
-
-var options = { method: 'GET',
-  url: 'https://api.nal.usda.gov/ndb/search/',
-  qs:
-   { format: 'json',
-     q: 'cheetos%20crunchy',
-     sort: 'n',
-     max: '25',
-     offset: '0',
-     api_key: 'wFqUmW1ckj0MTlwYUxmgx5XsOlboTvwJceKcCzIf' },
-  headers:
-   { 'Postman-Token': '106ade00-4e99-4323-9cee-af37535fb3bc',
-     'cache-control': 'no-cache' } };
-
-request(options, function (error, response, body) {
-  if (error) throw new Error(error);
-
-  console.log(body);
-});
