@@ -34,7 +34,7 @@ module.exports = function (controller) {
 
             // Confirmation thread
             convo.addMessage(
-                action: 'default',
+                //action: 'default',
                 "You picked '{{responses.answer}}'",
                 "confirm_choice");
 
