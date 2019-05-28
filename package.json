@@ -1,5 +1,5 @@
 {
-  "description": "Botkit template for Webex Teams",
+  "description": "The Chester the Cheetos Bot",
   "version": "0.9.0",
   "main": "bot.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "botkit",
     "devnet"
   ],
-  "author": "Stève Sfartz (Cisco DevNet) <stsfartz@cisco.com>",
+  "author": "Brian Donadio <bdonadio@cisco.com>",
   "license": "MIT",
   "dependencies": {
     "botkit": "0.7.0",
