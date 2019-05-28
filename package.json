@@ -9,12 +9,15 @@
     "webex-teams",
     "botkit",
     "devnet"
+    "Chester"
+    "Cheetos"
   ],
   "author": "Brian Donadio <bdonadio@cisco.com>",
   "license": "MIT",
   "dependencies": {
     "botkit": "0.7.0",
     "node-env-file": "0.1.8"
+    "request": "2.81.0"
   },
   "repository": {
     "type": "git",
