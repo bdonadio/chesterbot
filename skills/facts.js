@@ -12,6 +12,7 @@ module.exports = function (controller) {
             convo.ask("Enter Cheetos product to lookup nutrition information", [
                 {
                 //    pattern: "^blue|green|pink|red|yellow$",
+                    default: true,
                     callback: function (response, convo) {
                         convo.gotoThread("confirm_choice");
                     },
@@ -34,6 +35,7 @@ module.exports = function (controller) {
             // Confirmation thread
             convo.addMessage(
                 "You picked '{{responses.answer}}'",
+                action: 'default',
                 "confirm_choice");
 
             convo.addQuestion("Please, confirm your choice ? (yes|no)", [
