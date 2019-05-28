@@ -28,7 +28,7 @@ module.exports = function (controller) {
     });
 }
 
-function showUserPreference(controller, bot, message, userId, color) {
+function showUserPreference(controller, bot, message, userId, favorite) {
     bot.startConversation(message, function (err, convo) {
 
         // [GOOD TO KNOW] Mentions are now failing in 1-1 spaces
@@ -75,8 +75,8 @@ function askForUserPreference(controller, bot, message, userId) {
                 callback: function (response, convo) {
 
                     // Store color as user preference
-                    var pickedColor = convo.extractResponse('answer');
-                    var userPreference = { id: userId, value: pickedColor };
+                    var pickedFavorite = convo.extractResponse('answer');
+                    var userPreference = { id: userId, value: pickedFavorite };
                     controller.storage.users.save(userPreference, function (err) {
                         if (err) {
                             convo.say(message, 'sorry, could not access storage, err: ' + err.message);
