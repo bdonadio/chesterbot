@@ -1,5 +1,5 @@
 //
-// Adds meta information about the bot, and exposes them at a public endpoint 
+// Adds meta information about the bot, and exposes them at a public endpoint
 //
 module.exports = function (controller, bot) {
 
@@ -12,13 +12,13 @@ module.exports = function (controller, bot) {
         "description": "It's an awesome bot for sure!",
 
         // Where to get more information about the bot
-        "url": "https://github.com/CiscoDevNet/botkit-template",
+        "url": "https://github.com/bdonadio/chesterbot.git",
 
         // Legal owner
-        "legal_owner": "Cisco DevNet <https://developer.cisco.com>",
+        "legal_owner": "donadiob@gmail.com>",
 
         // Contact name for support
-        "support_contact": "Stève Sfartz <mailto:stsfartz@cisco.com>",
+        "support_contact": "Brian Donadio <mailto:donadiob@gmail.com>",
 
         // Messaging platform
         // [WORKAROUND] overriding Botkit's integrated support temporarly as 'ciscospark' is still returned
