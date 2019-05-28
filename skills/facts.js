@@ -9,27 +9,27 @@ module.exports = function (controller) {
 
         bot.startConversation(message, function (err, convo) {
 
-            convo.ask("What is your favorite color?", [
+            convo.ask("Enter Cheetos product to lookup nutrition information", [
                 {
-                    
+                //    pattern: "^blue|green|pink|red|yellow$",
                     callback: function (response, convo) {
                         convo.gotoThread("confirm_choice");
                     },
                 },
-                {
-                    default: true,
-                    callback: function (response, convo) {
-                        convo.gotoThread('bad_response');
-                    }
-                }
+        //        {
+          //          default: true,
+          //          callback: function (response, convo) {
+            //            convo.gotoThread('bad_response');
+              //      }
+          //      }
             ], { key: "answer" });
 
 
             // Bad response
-            convo.addMessage({
-                text: "Sorry, I don't know this color.<br/>_Tip: try blue, green, pink, red or yellow!_",
-                action: 'default',
-            }, 'bad_response');
+            //convo.addMessage({
+              //  text: "Sorry, I don't know this color.<br/>_Tip: try blue, green, pink, red or yellow!_",
+                //action: 'default',
+            //}, 'bad_response');
 
             // Confirmation thread
             convo.addMessage(
@@ -40,8 +40,8 @@ module.exports = function (controller) {
                 {
                     pattern: "^yes|hey|oui|si|da$",
                     callback: function (response, convo) {
-                        var pickedColor = convo.extractResponse('answer');
-                        convo.setVar("color", pickedColor);
+                        var pickedFlavor = convo.extractResponse('answer');
+                        convo.setVar("flavor", pickedFlavor);
                         convo.gotoThread("success");
                     },
                 },
@@ -55,7 +55,7 @@ module.exports = function (controller) {
 
             // Success thread
             convo.addMessage(
-                "Cool, I love '{{vars.color}}' too",
+                "Cool, I love '{{vars.flavor}}' too",
                 "success");
         });
     });
