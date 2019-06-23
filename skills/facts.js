@@ -12,11 +12,11 @@ module.exports = function (controller) {
 
         bot.startConversation(message, function (err, convo) {
 
-            convo.ask("What about coffee (yes/**no**/cancel)", [
+            convo.ask("Enter Cheetos product name to lookup nutrition information", [
                 {
-                    pattern: "yes|yeh|sure|oui|si",
+                    pattern: "Flamin|Crunchy",
                     callback: function (response, convo) {
-                        convo.say("Go, get some !");
+                        convo.say("Looking up nutrition facts for your choice!");
                         convo.next();
                     },
                 }
