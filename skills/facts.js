@@ -50,7 +50,7 @@ module.exports = function (controller) {
 
             // Bad response
             convo.addMessage({
-                text: "Sorry, I did not understand!<br/>_Tip: try 'yes', 'no' or 'cancel._'",
+                text: "Sorry, I did not understand!<br/>_Tip: try 'flamin' or 'crunchy'",
                 action: 'default', // goes back to the thread's current state, where the question is not answered
             }, 'bad_response');
 
