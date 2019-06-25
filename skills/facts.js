@@ -14,10 +14,10 @@ module.exports = function (controller) {
 
             convo.ask("Enter Cheetos product name to lookup nutrition information", [
                 {
-                    pattern: "Flamin|Crunchy",
+                    pattern: "Flamin",
                     callback: function (response, convo) {
                         convo.say("Looking up nutrition facts for your choice!");
-                        
+
                         convo.next();
                     },
                 }
@@ -63,3 +63,29 @@ module.exports = function (controller) {
         });
     });
 };
+
+
+
+
+
+                //Rest API Search Request to USDA Food Database
+                var request = require("request");
+
+                var options = { method: 'GET',
+                  url: 'https://api.nal.usda.gov/ndb/search/',
+                  qs:
+                   { format: 'json',
+                     q: 'pickedFlavor',
+                     sort: 'n',
+                     max: '25',
+                     offset: '0',
+                     api_key: 'wFqUmW1ckj0MTlwYUxmgx5XsOlboTvwJceKcCzIf' },
+                  headers:
+                   { 'Postman-Token': '106ade00-4e99-4323-9cee-af37535fb3bc',
+                     'cache-control': 'no-cache' } };
+
+                request(options, function (error, response, body) {
+                  if (error) throw new Error(error);
+
+                  console.log(body);
+                });
