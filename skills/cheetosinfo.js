@@ -40,8 +40,35 @@ module.exports = function (controller) {
 
             // Menu option 1)
             convo.addMessage({
-                text: "https://www.cheetos.com/products/cheetos-white-cheddar-bites-cheese-flavored-snacks",
-                action: 'default'
+              var question = "Choose one of the Cheetos products below to learn more:";
+              question += "<br/> `1)` White Cheddar Cheese Bites";
+              question += "<br/> `2)` find information about Cheetos Recipes";
+              question += "\n\nWhat do you want to check?<br/>_(type a number, a **bold keyword** or `stop`)_";
+              convo.ask(question, [
+                  {
+                      pattern: "1|White Cheddar",
+                      callback: function (response, convo) {
+                          convo.gotoThread('whitecheddarbites');
+                      },
+                  }
+                  , {
+                      pattern: "2|Recipes",
+                      callback: function (response, convo) {
+                          convo.gotoThread('menu_2');
+                      },
+                  }
+                  , {
+                      pattern: "cancel|stop",
+                      callback: function (response, convo) {
+                          convo.gotoThread('action_cancel');
+                      },
+                  }
+                  , {
+                      default: true,
+                      callback: function (response, convo) {
+                          convo.gotoThread('bad_response');
+                      }
+                  }
             }, 'menu_1');
 
             // Menu option 2)
@@ -52,9 +79,9 @@ module.exports = function (controller) {
 
             // Menu option 3)
             convo.addMessage({
-                text: "Nothing's like meeting in person at a conference, training or a hackathon. Check the list of [DevNet events](https://developer.cisco.com/site/devnet/events-contests/events/) or ask the bot: invite `CiscoDevNet@sparkbot.io` to chat in a Webex Teams space.",
+                text: "Click here to learn more about White Cheddar Bites (https://www.cheetos.com/products/cheetos-white-cheddar-bites-cheese-flavored-snacks)",
                 action: 'default'
-            }, 'menu_3');
+            }, 'whitecheddarbites');
 
             // Cancel
             convo.addMessage({
