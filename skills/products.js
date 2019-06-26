@@ -26,9 +26,21 @@ module.exports = function (controller) {
                     },
                 }
                 , {
-                    pattern: "2|Recipes",
+                    pattern: "2|Flavor Shots Flamin Hot",
                     callback: function (response, convo) {
                         convo.gotoThread('menu_2');
+                    },
+                }
+                , {
+                    pattern: "3|Crunchy",
+                    callback: function (response, convo) {
+                        convo.gotoThread('menu_3');
+                    },
+                }
+                , {
+                    pattern: "4|Flamin Hot Crunchy",
+                    callback: function (response, convo) {
+                        convo.gotoThread('menu_4');
                     },
                 }
                 , {
@@ -55,15 +67,21 @@ module.exports = function (controller) {
 
             // Menu option 2)
             convo.addMessage({
-                text: "Learnings **labs** are step-by-step tutorials. They are grouped into **tracks** to help you on your rampup journey. Just browse through [the learnings tracks](https://learninglabs.cisco.com/login) and pick the labs that suits your learning appetite!",
+                text: "Click here to learn more about Flavor Shots Flamin Hot (https://www.cheetos.com/products/cheetos-flavor-shots-flamin-hot-asteroids-flavored-snacks)",
                 action: 'default'
             }, 'menu_2');
 
             // Menu option 3)
             convo.addMessage({
-                text: "Click here to learn more about White Cheddar Bites (https://www.cheetos.com/products/cheetos-white-cheddar-bites-cheese-flavored-snacks)",
+                text: "Click here to learn more about Crunchy Cheetos (https://www.cheetos.com/products/cheetos-crunchy-cheese-flavored-snacks)",
                 action: 'default'
-            }, 'whitecheddarbites');
+            }, 'menu_3');
+
+            // Menu option 4)
+            convo.addMessage({
+                text: "Click here to learn more about Flamin Hot Crunchy Cheetos (https://www.cheetos.com/products/cheetos-crunchy-flamin-hot-cheese-flavored-snacks)",
+                action: 'default'
+            }, 'menu_4');
 
             // Cancel
             convo.addMessage({
