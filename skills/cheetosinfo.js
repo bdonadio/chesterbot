@@ -68,7 +68,7 @@ module.exports = function (controller) {
                           convo.gotoThread('bad_response');
                       }
                   }
-              ], 'menu_1');
+              ]}, 'menu_1');
 
             // Menu option 2)
             convo.addMessage({
