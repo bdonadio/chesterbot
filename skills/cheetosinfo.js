@@ -39,13 +39,11 @@ module.exports = function (controller) {
             ]);
 
             // Menu option 1)
-            bot.startConversation(message, function (err, convo) {
-
               var productquestion = "Choose one of the Cheetos products below to learn more:";
               productquestion += "<br/> `1)` White Cheddar Cheese Bites";
               productquestion += "<br/> `2)` find information about Cheetos Recipes";
               productquestion += "\n\nWhat do you want to check?<br/>_(type a number, a **bold keyword** or `stop`)_";
-              convo.ask(productquestion, [
+              convo.ask({productquestion, [
                   {
                       pattern: "1|White Cheddar",
                       callback: function (response, convo) {
