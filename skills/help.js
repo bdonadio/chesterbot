@@ -8,6 +8,7 @@ module.exports = function (controller) {
         text += "\n- " + bot.appendMention(message, "favorite") + ": user picked favorite Cheetos flavor is stored";
         text += "\n- " + bot.appendMention(message, "facts") + ": returns nutrition facts for searched Cheetos product";
         text += "\n- " + bot.appendMention(message, "cheetosinfo") + ": provides information about cheetoes products and recipes";
+        text += "\n- " + bot.appendMention(message, "products") + ": provides information about cheetos products";
         text += "\n- " + bot.appendMention(message, "color") + ": ask to pick a random color";
         text += "\n- " + bot.appendMention(message, "loop") + ": example of a menu that loops until explicitly stopped";
         text += "\n- " + bot.appendMention(message, "menu") + ": implement a menu via a conversation";
