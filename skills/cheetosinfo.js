@@ -40,7 +40,7 @@ module.exports = function (controller) {
 
             // Menu option 1)
             convo.addMessage({
-                text: "White Cheddar Bites https://www.cheetos.com/products/cheetos-white-cheddar-bites-cheese-flavored-snacks",
+                text: "https://www.cheetos.com/products/cheetos-white-cheddar-bites-cheese-flavored-snacks",
                 action: 'default'
             }, 'menu_1');
 
