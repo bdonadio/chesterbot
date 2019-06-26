@@ -39,7 +39,6 @@ module.exports = function (controller) {
             ]);
 
             // Menu option 1)
-            convo.addMessage({
               var productquestion = "Choose one of the Cheetos products below to learn more:";
               productquestion += "<br/> `1)` White Cheddar Cheese Bites";
               productquestion += "<br/> `2)` find information about Cheetos Recipes";
@@ -69,7 +68,7 @@ module.exports = function (controller) {
                           convo.gotoThread('bad_response');
                       }
                   }
-            }, 'menu_1');
+              }, 'menu_1');
 
             // Menu option 2)
             convo.addMessage({
