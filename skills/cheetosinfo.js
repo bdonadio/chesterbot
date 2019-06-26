@@ -41,7 +41,7 @@ module.exports = function (controller) {
             // Menu option 1)
             convo.addMessage({
                 text: "Menu1",
-                action: 'default'
+                action: 'stop'
             }, 'menu_1');
 
 
