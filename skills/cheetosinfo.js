@@ -40,11 +40,11 @@ module.exports = function (controller) {
 
             // Menu option 1)
             convo.addMessage({
-              var question = "Choose one of the Cheetos products below to learn more:";
-              question += "<br/> `1)` White Cheddar Cheese Bites";
-              question += "<br/> `2)` find information about Cheetos Recipes";
-              question += "\n\nWhat do you want to check?<br/>_(type a number, a **bold keyword** or `stop`)_";
-              convo.ask(question, [
+              var productquestion = "Choose one of the Cheetos products below to learn more:";
+              productquestion += "<br/> `1)` White Cheddar Cheese Bites";
+              productquestion += "<br/> `2)` find information about Cheetos Recipes";
+              productquestion += "\n\nWhat do you want to check?<br/>_(type a number, a **bold keyword** or `stop`)_";
+              convo.ask(productquestion, [
                   {
                       pattern: "1|White Cheddar",
                       callback: function (response, convo) {
