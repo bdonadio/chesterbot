@@ -44,36 +44,7 @@ module.exports = function (controller) {
                 action: 'default'
             }, 'menu_1');
 
-              var productquestion = "Choose one of the Cheetos products below to learn more:";
-              productquestion += "<br/> `1)` White Cheddar Cheese Bites";
-              productquestion += "<br/> `2)` find information about Cheetos Recipes";
-              productquestion += "\n\nWhat do you want to check?<br/>_(type a number, a **bold keyword** or `stop`)_";
-              convo.ask(productquestion, [
-                  {
-                      pattern: "1|White Cheddar",
-                      callback: function (response, convo) {
-                          convo.gotoThread('whitecheddarbites');
-                      },
-                  }
-                  , {
-                      pattern: "2|Recipes",
-                      callback: function (response, convo) {
-                          convo.gotoThread('menu_2');
-                      },
-                  }
-                  , {
-                      pattern: "cancel|stop",
-                      callback: function (response, convo) {
-                          convo.gotoThread('action_cancel');
-                      },
-                  }
-                  , {
-                      default: true,
-                      callback: function (response, convo) {
-                          convo.gotoThread('bad_response');
-                      }
-                  }
-              ]);
+
 
             // Menu option 2)
             convo.addMessage({
