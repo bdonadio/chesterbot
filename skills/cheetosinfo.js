@@ -39,6 +39,8 @@ module.exports = function (controller) {
             ]);
 
             // Menu option 1)
+            bot.startConversation(message, function (err, convo) {
+
               var productquestion = "Choose one of the Cheetos products below to learn more:";
               productquestion += "<br/> `1)` White Cheddar Cheese Bites";
               productquestion += "<br/> `2)` find information about Cheetos Recipes";
