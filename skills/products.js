@@ -83,7 +83,7 @@ module.exports = function (controller) {
 
             // Menu option 1)
             convo.addMessage({
-                text: "Click here to learn more about Flavor White Cheddar Bites (https://www.cheetos.com/products/cheetos-white-cheddar-bites-cheese-flavored-snacks)",
+                text: "[Click here to learn more about Flavor White Cheddar Bites](https://www.cheetos.com/products/cheetos-white-cheddar-bites-cheese-flavored-snacks)",
                 file: 'https://www.cheetos.com/sites/cheetos.com/files/2019-02/Cheetos%20White%20Cheddar%20Bites_0.png',
                 action: 'default'
             }, 'menu_1');
