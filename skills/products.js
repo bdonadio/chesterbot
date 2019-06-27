@@ -90,43 +90,50 @@ module.exports = function (controller) {
 
             // Menu option 2)
             convo.addMessage({
-                text: "Click here to learn more about Flavor Shots Flamin Hot (https://www.cheetos.com/products/cheetos-flavor-shots-flamin-hot-asteroids-flavored-snacks)",
+                text: "[Click here to learn more about Flavor Shots Flamin Hot](https://www.cheetos.com/products/cheetos-flavor-shots-flamin-hot-asteroids-flavored-snacks)",
+                file: 'https://www.cheetos.com/sites/cheetos.com/files/2019-02/Cheetos%20Flavor%20Shots%20Flamin%27%20Hot%20Asteroids_0.png',
                 action: 'default'
             }, 'menu_2');
 
             // Menu option 3)
             convo.addMessage({
-                text: "Click here to learn more about Crunchy Cheetos (https://www.cheetos.com/products/cheetos-crunchy-cheese-flavored-snacks)",
+                text: "[Click here to learn more about Crunchy Cheetos](https://www.cheetos.com/products/cheetos-crunchy-cheese-flavored-snacks)",
+                file: 'https://www.cheetos.com/sites/cheetos.com/files/2019-03/Cheetos%20Crunchy_v2_0.png',
                 action: 'default'
             }, 'menu_3');
 
             // Menu option 4)
             convo.addMessage({
-                text: "Click here to learn more about Flamin Hot Crunchy Cheetos (https://www.cheetos.com/products/cheetos-crunchy-flamin-hot-cheese-flavored-snacks)",
+                text: "[Click here to learn more about Flamin Hot Crunchy Cheetos](https://www.cheetos.com/products/cheetos-crunchy-flamin-hot-cheese-flavored-snacks)",
+                file: 'https://www.cheetos.com/sites/cheetos.com/files/2019-02/Cheetos%20Crunchy%20Flamin%27%20Hot_1.png',
                 action: 'default'
             }, 'menu_4');
 
             // Menu option 5)
             convo.addMessage({
-                text: "Click here to learn more about Puffs (https://www.cheetos.com/products/cheetos-puffs-cheese-flavored-snacks)",
+                text: "[Click here to learn more about Puffs](https://www.cheetos.com/products/cheetos-puffs-cheese-flavored-snacks)",
+                file: 'https://www.cheetos.com/sites/cheetos.com/files/2019-02/Cheetos%20Puffs_0.png',
                 action: 'default'
             }, 'menu_5');
 
             // Menu option 6)
             convo.addMessage({
-                text: "Click here to learn more about Paws (https://www.cheetos.com/products/cheetos-paws-cheese-flavored-snacks)",
+                text: "[Click here to learn more about Paws](https://www.cheetos.com/products/cheetos-paws-cheese-flavored-snacks)",
+                file: 'https://www.cheetos.com/sites/cheetos.com/files/2019-02/Cheetos%20Paws_0.png',
                 action: 'default'
             }, 'menu_6');
 
             // Menu option 7)
             convo.addMessage({
-                text: "Click here to learn more about Crunchy Flamin Hot Chipotle Ranch (https://www.cheetos.com/products/cheetos-crunchy-flamin-hot-chipotle-ranch-cheese-flavored-snacks)",
+                text: "[Click here to learn more about Crunchy Flamin Hot Chipotle Ranch](https://www.cheetos.com/products/cheetos-crunchy-flamin-hot-chipotle-ranch-cheese-flavored-snacks)",
+                file: 'https://www.cheetos.com/sites/cheetos.com/files/2019-03/FH%20Chipotle%20Ranch_v2_0.png',
                 action: 'default'
             }, 'menu_7');
 
             // Menu option 8)
             convo.addMessage({
-                text: "Click here to learn more about Crunchy Flamin Hot Limon (https://www.cheetos.com/products/cheetos-crunchy-flamin-hot-lim-n-cheese-flavored-snacks)",
+                text: "[Click here to learn more about Crunchy Flamin Hot Limon](https://www.cheetos.com/products/cheetos-crunchy-flamin-hot-lim-n-cheese-flavored-snacks)",
+                file: 'https://www.cheetos.com/sites/cheetos.com/files/2019-02/Cheetos%20Crunchy%20Flamin%27%20Hot%20Limon_0.png',
                 action: 'default'
             }, 'menu_8');
 
