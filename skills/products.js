@@ -31,7 +31,7 @@ module.exports = function (controller) {
             question += "\n\nWhat do you want to check?<br/>_(type a number, a **bold keyword** or `stop`)_";
             convo.ask(question, [
                 {
-                    pattern: "1"|"White Cheddar Bites"",
+                    pattern: "1"|"White Cheddar Bites",
                     callback: function (response, convo) {
                         convo.gotoThread('menu_1');
                     },
