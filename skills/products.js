@@ -85,13 +85,13 @@ module.exports = function (controller) {
                     },
                 }
                 , {
-                    pattern: "'10'|Crunchy Cheddar Jalapeno Cheese",
+                    pattern: ""10"|Crunchy Cheddar Jalapeno Cheese",
                     callback: function (response, convo) {
                         convo.gotoThread('menu_10');
                     },
                 }
                 , {
-                    pattern: "'11'|Puffs Flamin Hot",
+                    pattern: ""11"|Puffs Flamin Hot",
                     callback: function (response, convo) {
                         convo.gotoThread('menu_11');
                     },
