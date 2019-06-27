@@ -16,6 +16,17 @@ module.exports = function (controller) {
             question += "<br/> `6)` Paws";
             question += "<br/> `7)` Crunchy Flamin Hot Chipotle Ranch";
             question += "<br/> `8)` Crunchy Flamin Hot Limon";
+            question += "<br/> `9)` Crunchy XXTRA Flamin Hot";
+            question += "<br/> `10)` Crunchy Cheddar Jalapeno Cheese";
+            question += "<br/> `11)` Puffs Flamin Hot";
+            question += "<br/> `12)` Crunchy Flamin HOT & DORITOS DINAMITA Chile Limon Flavored Rolled Tortilla Chips";
+            question += "<br/> `13)` Simply Puffs White Cheddar Cheese";
+            question += "<br/> `14)` Simply Puffs White Cheddar Jalapeno";
+            question += "<br/> `15)` Simply Crunchy White Cheddar Cheese";
+            question += "<br/> `16)` Baked Crunchy Cheese";
+            question += "<br/> `17)` Baked Crunchy Flamin Hot";
+            question += "<br/> `18)` Fantastix Chili Cheese Baked Corn";
+            question += "<br/> `19)` Fantastix Flamin Hot Baked Corn";
 
             question += "\n\nWhat do you want to check?<br/>_(type a number, a **bold keyword** or `stop`)_";
             convo.ask(question, [
@@ -65,6 +76,72 @@ module.exports = function (controller) {
                     pattern: "8|Crunchy Flamin Hot Limon",
                     callback: function (response, convo) {
                         convo.gotoThread('menu_8');
+                    },
+                }
+                , {
+                    pattern: "9|Crunchy XXTRA Flamin Hot",
+                    callback: function (response, convo) {
+                        convo.gotoThread('menu_9');
+                    },
+                }
+                , {
+                    pattern: "10|Crunchy Cheddar Jalapeno Cheese",
+                    callback: function (response, convo) {
+                        convo.gotoThread('menu_10');
+                    },
+                }
+                , {
+                    pattern: "11|Puffs Flamin Hot",
+                    callback: function (response, convo) {
+                        convo.gotoThread('menu_11');
+                    },
+                }
+                , {
+                    pattern: "12|Crunchy Flamin HOT & DORITOS DINAMITA Chile Limon Flavored Rolled Tortilla Chips",
+                    callback: function (response, convo) {
+                        convo.gotoThread('menu_12');
+                    },
+                }
+                , {
+                    pattern: "13|Simply Puffs White Cheddar Cheese",
+                    callback: function (response, convo) {
+                        convo.gotoThread('menu_13');
+                    },
+                }
+                , {
+                    pattern: "14|Simply Puffs White Cheddar Jalapeno",
+                    callback: function (response, convo) {
+                        convo.gotoThread('menu_14');
+                    },
+                }
+                , {
+                    pattern: "15|Simply Crunchy White Cheddar Cheese",
+                    callback: function (response, convo) {
+                        convo.gotoThread('menu_15');
+                    },
+                }
+                , {
+                    pattern: "16|Baked Crunchy Cheese",
+                    callback: function (response, convo) {
+                        convo.gotoThread('menu_16');
+                    },
+                }
+                , {
+                    pattern: "17|Baked Crunchy Flamin Hot",
+                    callback: function (response, convo) {
+                        convo.gotoThread('menu_17');
+                    },
+                }
+                , {
+                  pattern: "18|Fantastix Chili Cheese Baked Corn",
+                  callback: function (response, convo) {
+                      convo.gotoThread('menu_18');
+                    },
+                }
+                , {
+                  pattern: "19|Fantastix Flamin Hot Baked Corn",
+                  callback: function (response, convo) {
+                      convo.gotoThread('menu_19');
                     },
                 }
                 , {
@@ -136,6 +213,83 @@ module.exports = function (controller) {
                 file: 'https://www.cheetos.com/sites/cheetos.com/files/2019-02/Cheetos%20Crunchy%20Flamin%27%20Hot%20Limon_0.png',
                 action: 'default'
             }, 'menu_8');
+
+            // Menu option 9)
+            convo.addMessage({
+                text: "[Click here to learn more about Crunchy XXTRA Flamin Hot](https://www.cheetos.com/products/cheetos-crunchy-xxtra-flamin-hot-cheese-flavored-snacks)",
+                file: 'https://www.cheetos.com/sites/cheetos.com/files/2019-03/XXXtra%20Flamin%20Hot%20Crunchy_v2.png',
+                action: 'default'
+            }, 'menu_9');
+
+            // Menu option 10)
+            convo.addMessage({
+                text: "[Click here to learn more about Crunchy Cheddar Jalapeno Cheese](https://www.cheetos.com/products/cheetos-crunchy-cheddar-jalapeno-cheese-flavored-snacks)",
+                file: 'https://www.cheetos.com/sites/cheetos.com/files/2019-02/Cheetos%20Crunchy%20Cheddar%20Jalapeno_0.png',
+                action: 'default'
+            }, 'menu_10');
+
+            // Menu option 11)
+            convo.addMessage({
+                text: "[Click here to learn more about Puffs Flamin Hot](https://www.cheetos.com/products/cheetos-puffs-flamin-hot-cheese-flavored-snacks)",
+                file: 'https://www.cheetos.com/sites/cheetos.com/files/2019-02/Cheetos%20Puffs%20Flamin%27%20Hot_0.png',
+                action: 'default'
+            }, 'menu_11');
+
+            // Menu option 12)
+            convo.addMessage({
+                text: "[Click here to learn more about Crunchy Flamin HOT & DORITOS DINAMITA Chile Limon Flavored Rolled Tortilla Chips](https://www.cheetos.com/products/cheetos-crunchy-flamin-hot-cheese-flavored-snacks-doritos-dinamita-chile-lim-n-flavored)",
+                file: 'https://www.cheetos.com/sites/cheetos.com/files/2019-02/Cheetos%20Crunchy%20Flamin%27%20Hot%20%26%20Doritos_0.png',
+                action: 'default'
+            }, 'menu_12');
+
+            // Menu option 13)
+            convo.addMessage({
+                text: "[Click here to learn more about Simply Puffs White Cheddar Cheese](https://www.cheetos.com/products/cheetos-simply-puffs-white-cheddar-cheese-flavored-snacks)",
+                file: 'https://www.cheetos.com/sites/cheetos.com/files/2019-03/SimpleCheetosWhiteCheddar_v2.png',
+                action: 'default'
+            }, 'menu_13');
+
+            // Menu option 14)
+            convo.addMessage({
+                text: "[Click here to learn more about Simply Puffs White Cheddar Jalapeno](https://www.cheetos.com/products/cheetos-simply-puffs-white-cheddar-jalapeno-cheese-flavored-snacks)",
+                file: 'https://www.cheetos.com/sites/cheetos.com/files/2019-02/Cheetos%20Simply%20Puffs%20White%20Cheddar%20Jalapeno.png',
+                action: 'default'
+            }, 'menu_14');
+
+            // Menu option 15)
+            convo.addMessage({
+                text: "[Click here to learn more about Simply Crunchy White Cheddar Cheese](https://www.cheetos.com/products/cheetos-simply-crunchy-white-cheddar-cheese-flavored-snacks)",
+                file: 'https://www.cheetos.com/sites/cheetos.com/files/2019-02/Cheetos%20Simply%20Crunchy%20White%20Cheddar.png',
+                action: 'default'
+            }, 'menu_15');
+
+            // Menu option 16)
+            convo.addMessage({
+                text: "[Click here to learn more about Baked Crunchy Cheese](https://www.cheetos.com/products/cheetos-baked-crunchy-cheese-flavored-snacks)",
+                file: 'https://www.cheetos.com/sites/cheetos.com/files/2019-02/Cheetos%20Oven%20Baked%20Crunchy_0.png',
+                action: 'default'
+            }, 'menu_16');
+
+            // Menu option 17)
+            convo.addMessage({
+                text: "[Click here to learn more about Baked Crunchy Flamin Hot](https://www.cheetos.com/products/cheetos-baked-crunchy-flamin-hot-cheese-flavored-snacks)",
+                file: 'https://www.cheetos.com/sites/cheetos.com/files/2019-02/Cheetos%20Oven%20Baked%20Crunchy%20Flamin%27_1.png',
+                action: 'default'
+            }, 'menu_17');
+
+            // Menu option 18)
+            convo.addMessage({
+                text: "[Click here to learn more about Fantastix Chili Cheese Baked Corn](https://www.cheetos.com/products/cheetos-fantastix-chili-cheese-flavored-baked-corn-potato-snacks)",
+                file: 'https://www.cheetos.com/sites/cheetos.com/files/2019-02/Cheetos%20Fantastix%20Chili%20Cheese_1.png',
+                action: 'default'
+            }, 'menu_18');
+
+            // Menu option 19)
+            convo.addMessage({
+                text: "[Click here to learn more about Fantastix Flamin Hot Baked Corn](https://www.cheetos.com/products/cheetos-fantastix-flamin-hot-flavored-baked-corn-potato-snacks)",
+                file: 'https://www.cheetos.com/sites/cheetos.com/files/2019-02/Cheetos%20Fantastix%20Flamin%27%20Hot_1.png',
+                action: 'default'
+            }, 'menu_19');
 
             // Cancel
             convo.addMessage({
