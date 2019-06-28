@@ -1,6 +1,6 @@
 # ChesterBot for Webex Teams
 
-This bot builds on the botkit adding Chester Cheetos functionality.  Template regroups a set of best practices to bootstrap a Botkit project for Webex Teams.
+This bot builds on the botkit adding Chester Cheetah functionality.  Chester can assist with details about your favorite Cheeto Products!  Template regroups a set of best practices to bootstrap a Botkit project for Webex Teams.
 
 **Take a look at the [redis](https://github.com/CiscoDevNet/botkit-template/tree/redis) and [pluggable architecture](https://github.com/CiscoDevNet/botkit-template/tree/plugin) branches for more advanced templates**
 
