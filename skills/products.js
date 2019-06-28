@@ -37,49 +37,49 @@ module.exports = function (controller) {
                     },
                 }
                 , {
-                    pattern: "2|Flavor Shots Flamin Hot",
+                    pattern: "^2$|^Flavor Shots Flamin Hot$",
                     callback: function (response, convo) {
                         convo.gotoThread('menu_2');
                     },
                 }
                 , {
-                    pattern: "3|Crunchy",
+                    pattern: "^3$|^Crunchy$",
                     callback: function (response, convo) {
                         convo.gotoThread('menu_3');
                     },
                 }
                 , {
-                    pattern: "4|Flamin Hot Crunchy",
+                    pattern: "^4$|^Flamin Hot Crunchy$",
                     callback: function (response, convo) {
                         convo.gotoThread('menu_4');
                     },
                 }
                 , {
-                    pattern: "5|Puffs",
+                    pattern: "^5$|^Puffs$",
                     callback: function (response, convo) {
                         convo.gotoThread('menu_5');
                     },
                 }
                 , {
-                    pattern: "6|Paws",
+                    pattern: "^6$|^Paws$",
                     callback: function (response, convo) {
                         convo.gotoThread('menu_6');
                     },
                 }
                 , {
-                    pattern: "7|Crunchy Flamin Hot Chipotle Ranch",
+                    pattern: "^7$|^Crunchy Flamin Hot Chipotle Ranch$",
                     callback: function (response, convo) {
                         convo.gotoThread('menu_7');
                     },
                 }
                 , {
-                    pattern: "8|Crunchy Flamin Hot Limon",
+                    pattern: "^8$|^Crunchy Flamin Hot Limon$",
                     callback: function (response, convo) {
                         convo.gotoThread('menu_8');
                     },
                 }
                 , {
-                    pattern: "9|Crunchy XXTRA Flamin Hot",
+                    pattern: "^9$|^Crunchy XXTRA Flamin Hot$",
                     callback: function (response, convo) {
                         convo.gotoThread('menu_9');
                     },
@@ -97,49 +97,49 @@ module.exports = function (controller) {
                     },
                 }
                 , {
-                    pattern: "12|Crunchy Flamin HOT & DORITOS DINAMITA Chile Limon Flavored Rolled Tortilla Chips",
+                    pattern: "^12$|^Crunchy Flamin HOT & DORITOS DINAMITA Chile Limon Flavored Rolled Tortilla Chips$",
                     callback: function (response, convo) {
                         convo.gotoThread('menu_12');
                     },
                 }
                 , {
-                    pattern: "13|Simply Puffs White Cheddar Cheese",
+                    pattern: "^13$|^Simply Puffs White Cheddar Cheese$",
                     callback: function (response, convo) {
                         convo.gotoThread('menu_13');
                     },
                 }
                 , {
-                    pattern: "14|Simply Puffs White Cheddar Jalapeno",
+                    pattern: "^14$|^Simply Puffs White Cheddar Jalapeno$",
                     callback: function (response, convo) {
                         convo.gotoThread('menu_14');
                     },
                 }
                 , {
-                    pattern: "15|Simply Crunchy White Cheddar Cheese",
+                    pattern: "^15$|^Simply Crunchy White Cheddar Cheese$",
                     callback: function (response, convo) {
                         convo.gotoThread('menu_15');
                     },
                 }
                 , {
-                    pattern: "16|Baked Crunchy Cheese",
+                    pattern: "^16$|^Baked Crunchy Cheese$",
                     callback: function (response, convo) {
                         convo.gotoThread('menu_16');
                     },
                 }
                 , {
-                    pattern: "17|Baked Crunchy Flamin Hot",
+                    pattern: "^17$|^Baked Crunchy Flamin Hot$",
                     callback: function (response, convo) {
                         convo.gotoThread('menu_17');
                     },
                 }
                 , {
-                  pattern: "18|Fantastix Chili Cheese Baked Corn",
+                  pattern: "^18$|^Fantastix Chili Cheese Baked Corn$",
                   callback: function (response, convo) {
                       convo.gotoThread('menu_18');
                     },
                 }
                 , {
-                  pattern: "19|Fantastix Flamin Hot Baked Corn",
+                  pattern: "^19$|^Fantastix Flamin Hot Baked Corn$",
                   callback: function (response, convo) {
                       convo.gotoThread('menu_19');
                     },
